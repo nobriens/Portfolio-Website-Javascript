@@ -88,7 +88,6 @@ body::before { /*So initially had some issues with the background I made as it l
   position: relative;
 }
 
-
 .nav-links a:hover {
   color: #FE3D00; /*here I put a hover state so the color would highlight when hovered*/
 }
@@ -98,6 +97,47 @@ body::before { /*So initially had some issues with the background I made as it l
     justify-content: center;
     gap: 1rem;
   }
+ .dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000000e6;
+  min-width: 160px;
+  border-radius: 6px;
+  padding: 8px 0;
+  z-index: 200;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #FE3D00;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  cursor: default;
+  color: white;
+  font-weight: 500;
+}
 
 .hero { /*this section was for the opening text*/
   min-height: 850px;
@@ -697,3 +737,4 @@ html, body { /*this was done at the end to remove the excess scrolling from the 
   transform: scale(0.5);  
   transform-origin: top left;
 }
+
