@@ -74,6 +74,30 @@ body::before { /*So initially had some issues with the background I made as it l
   border-radius: 5px; /*I wanted to have a slight border around my logo, purely aesthetic*/
 }
 
+.navbar {
+  position: fixed;/*here I began the navbar, this line kept it fixed while scrolling*/
+  top: 0; 
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;/*this kept the space between the logo and the links on the right*/
+  align-items: center;
+  background: #000000d3;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center; 
+}
+
+.logo img {
+  height: 40px;          /* here I adjusted the size of the logo */
+  width: auto;         
+  object-fit: contain;
+  border-radius: 5px; /*I wanted to have a slight border around my logo, purely aesthetic*/
+}
 
 .nav-links {
   list-style: none;
@@ -88,6 +112,7 @@ body::before { /*So initially had some issues with the background I made as it l
   position: relative;
 }
 
+
 .nav-links a:hover {
   color: #FE3D00; /*here I put a hover state so the color would highlight when hovered*/
 }
@@ -97,7 +122,8 @@ body::before { /*So initially had some issues with the background I made as it l
     justify-content: center;
     gap: 1rem;
   }
- .dropdown {
+
+  .dropdown {
   position: relative;
 }
 
@@ -737,4 +763,5 @@ html, body { /*this was done at the end to remove the excess scrolling from the 
   transform: scale(0.5);  
   transform-origin: top left;
 }
+
 
